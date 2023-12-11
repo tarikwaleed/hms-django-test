@@ -17,7 +17,3 @@ services:
     ports:
       - 8001:8001
     command: sh -c "cd /app/src && gunicorn --reload hospitalmanagement.wsgi --bind 0.0.0.0:8001 --workers 4 --threads 4 --timeout 120"
-    env_file:
-      - "./api/.env"
-    depends_on:
-      - postgres
