@@ -1,0 +1,12 @@
+**Developed By **
+
+**Instructions**
+--Create a virtual environment (optional but recommended):
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+- Install the Requirements: pip install -r requirement.txt
+- Then, make database migrations: python manage.py makemigrations
+- python manage.py migrate
+- And finally, run the application: python manage.py runserver
+
+For Admin Account, please create one with superuser!
