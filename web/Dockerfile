@@ -12,6 +12,8 @@ COPY requirements.txt .
 ARG SSH_PRIVATE_KEY
 
 RUN  \
+
+     dnf module install python38 && \
      python3.8 -m venv /venv && \
      pip install --no-cache-dir -r requirements.txt
 
