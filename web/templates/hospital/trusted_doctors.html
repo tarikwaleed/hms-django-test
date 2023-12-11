@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            {% for doctor in doctors %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{{ doctor.profile_pic.url }}" class="card-img-top" alt="Doctor Image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ doctor.get_name }}</h5>
+                        <p class="card-text">{{ doctor.department }}</p>
+                        <p class="card-text">{{ doctor.address }}</p>
+                        <p class="card-text">{{ doctor.mobile }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional, if needed) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
